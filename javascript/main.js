@@ -21,6 +21,10 @@ class app
 	loadShader(url)
 	{
 		const request = new XMLHttpRequest();
+
+		request.setRequestHeader("Pragma", "no-cache");
+		request.setRequestHeader("Cache-Control", "no-cache");
+
 		request.open("GET", url, true);
 
 		request.responseType = "text";
