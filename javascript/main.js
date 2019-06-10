@@ -52,7 +52,7 @@ class app
 			}
 		}
 
-		console.log(readSource(script.getAttribute("src")));
+		console.log(this.readSource(script.getAttribute("src")));
 
 		this.gl.shaderSource(shader, script.text);
 
