@@ -45,15 +45,17 @@ class app
 		
 		return text;
 		*/
-		const text = fetch(url).then(function(response)
+		let source;
+		
+		fetch(url).then(function(response)
 		{
 			return response.text();
 		}).then(function(text)
 		{
-			return text;
+			source = text;
 		});
 
-		return text;
+		return source;
 	}
 
 	createShader(id)
