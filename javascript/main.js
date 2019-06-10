@@ -22,9 +22,9 @@ class app
 	{
 		const request = new XMLHttpRequest();
 
-		request.open("GET", url, true);
+		request.open("GET", url, false);
 
-		request.responseType = "text";
+		//request.responseType = "text";
 
 		let text = null;
 
