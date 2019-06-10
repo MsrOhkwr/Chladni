@@ -52,10 +52,12 @@ class app
 			}
 		}
 		
-		(async() =>
+		const reader = new FileReader();
+		reader.readAsText(script.getAttribute("src"));
+		reader.onload = function()
 		{
-			return await (await fetch(script.getAttribute("src"))).text();
-		})().then((text) => console.log(script.text = text));
+			console.log(reader.result);
+		}
 
 		this.gl.shaderSource(shader, script.text);
 
