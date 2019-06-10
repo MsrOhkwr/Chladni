@@ -35,7 +35,7 @@ class app
 			{
 				if (request.status === 200)
 				{
-					return request.responseText();
+					return request.responseText;
 				}
 			}
 		}
