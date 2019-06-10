@@ -124,7 +124,7 @@ function main()
 	mainApp.gl.clearColor(0.0, 0.0, 0.0, 1.0);
 	mainApp.gl.clear(mainApp.gl.COLOR_BUFFER_BIT);
 
-	mainApp.loadShader("../shader/vertexShader.glsl");
+	mainApp.loadShader("./shader/vertexShader.glsl");
 	const vertexShader = mainApp.createShader("vertexShader");
 	const fragmentShader = mainApp.createShader("fragmentShader");
 
