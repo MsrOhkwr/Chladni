@@ -20,6 +20,7 @@ class app
 
 	loadShader(url)
 	{
+		/*
 		const request = new XMLHttpRequest();
 
 		request.open("GET", url, false);
@@ -42,6 +43,16 @@ class app
 
 		request.send(null);
 		
+		return text;
+		*/
+		const text = fetch(url).then(function(response)
+		{
+			return response.text();
+		}).then(function(text)
+		{
+			return text;
+		});
+
 		return text;
 	}
 
