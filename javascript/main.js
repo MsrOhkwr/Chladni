@@ -84,7 +84,7 @@ class app
 		}
 
 		const source = this.loadShader(script.getAttribute("src"));
-		console.log(source.join());
+		console.log((await Promise.all(source)).join("\n"));
 
 		this.gl.shaderSource(shader, source);
 
