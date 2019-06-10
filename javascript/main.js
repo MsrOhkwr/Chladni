@@ -49,7 +49,8 @@ class app
 
 		const source = async function()
 		{
-			return await (await fetch(script.getAttribute("src"))).text();
+			const text = await (await fetch(script.getAttribute("src"))).text();
+			return text;
 		}
 		console.log(source);
 
