@@ -18,7 +18,7 @@ class app
 		this.gl.viewport(0, 0, width, height);
 	}
 
-	createShader(id)
+	async createShader(id)
 	{
 		let shader;
 
