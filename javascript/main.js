@@ -23,8 +23,10 @@ class app
 		const request = new XMLHttpRequest();
 
 		request.open("GET", url, true);
-		
+
 		request.responseType = "text";
+		
+		request.send(null);
 
 		if (request.readyState === request.DONE)
 		{
@@ -34,8 +36,6 @@ class app
 				return request.responseText;
 			}
 		}
-
-		request.send(null);
 	}
 
 	createShader(id)
