@@ -25,17 +25,20 @@ class app
 		request.open("GET", url, true);
 
 		request.responseType = "text";
-		
-		request.send(null);
 
-		if (request.readyState === request.DONE)
+		request.onload = function()
 		{
-			if (request.status === 200)
+			if (request.readyState === request.DONE)
 			{
-				console.log(request.responseText);
-				return request.responseText;
+				if (request.status === 200)
+				{
+					console.log(request.responseText);
+					return request.responseText;
+				}
 			}
 		}
+
+		request.send(null);
 	}
 
 	createShader(id)
