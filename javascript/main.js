@@ -18,42 +18,6 @@ class app
 		this.gl.viewport(0, 0, width, height);
 	}
 
-	loadShader(url)
-	{
-		/*
-		const request = new XMLHttpRequest();
-
-		request.open("GET", url, false);
-
-		//request.responseType = "text";
-
-		let text = null;
-
-		request.onload = function()
-		{
-			if (request.readyState === request.DONE)
-			{
-				if (request.status === 200)
-				{
-					console.log(request.responseText);
-					text = request.responseText;
-				}
-			}
-		}
-
-		request.send(null);
-		
-		return text;
-		*/
-		return fetch(url).then(function(response)
-		{
-			return response.text();
-		}).then(function(text)
-		{
-			return text;
-		});
-	}
-
 	createShader(id)
 	{
 		let shader;
@@ -83,10 +47,7 @@ class app
 			}
 		}
 
-		const source = this.loadShader(script.getAttribute("src"));
-		console.log((await Promise.all(source)).join("\n"));
-
-		this.gl.shaderSource(shader, source);
+		this.gl.shaderSource(shader, script.text);
 
 		this.gl.compileShader(shader);
 
