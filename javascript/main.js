@@ -52,7 +52,7 @@ class app
 			const text = await (await fetch(script.getAttribute("src"))).text();
 			return text;
 		}
-		console.log(source);
+		console.log(source());
 
 		this.gl.shaderSource(shader, script.text);
 
