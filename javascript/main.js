@@ -74,6 +74,7 @@ class app
 		}
 
 		const text = this.loadShader(script.src);
+		console.log(text);
 
 		this.gl.shaderSource(shader, text);
 
