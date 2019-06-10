@@ -55,9 +55,9 @@ class app
 		(async() =>
 		{
 			return await (await fetch(script.getAttribute("src"))).text();
-		})().then(text => this.gl.shaderSource(shader, text));
+		})().then((text) => console.log(text));
 
-		//this.gl.shaderSource(shader, script.text);
+		this.gl.shaderSource(shader, script.text);
 
 		this.gl.compileShader(shader);
 
