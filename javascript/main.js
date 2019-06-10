@@ -47,12 +47,12 @@ class app
 			}
 		}
 
-		const source = async function()
+		let source
+		async function readSource()
 		{
-			const text = await (await fetch(script.getAttribute("src"))).text();
-			return text;
+			return await (await fetch(script.getAttribute("src"))).text();
 		}
-		console.log(source());
+		console.log(readSource());
 
 		this.gl.shaderSource(shader, script.text);
 
