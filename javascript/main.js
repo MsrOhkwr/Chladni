@@ -25,7 +25,7 @@ class app
 
 	createShader(id)
 	{
-		const gl = this.gl;
+		let shader;
 
 		const script = document.getElementById(id);
 	
@@ -34,17 +34,16 @@ class app
 			return;
 		}
 	
-		let shader;
 		switch(script.type)
 		{
 			case "x-shader/x-vertex":
 			{
-				shader = gl.createShader(gl.VERTEX_SHADER);
+				shader = this.gl.createShader(this.gl.VERTEX_SHADER);
 				break;
 			}
 			case "x-shader/x-fragment":
 			{
-				shader = gl.createShader(gl.FRAGMENT_SHADER);
+				shader = this.gl.createShader(this.gl.FRAGMENT_SHADER);
 				break;
 			}
 			default:
@@ -52,7 +51,7 @@ class app
 				return;
 			}
 		}
-
+		const gl = this.gl;
 		(async() =>
 		{
 			return await (await fetch(script.getAttribute("src"))).text();
@@ -60,51 +59,47 @@ class app
 
 		//this.gl.shaderSource(shader, script.text);
 
-		gl.compileShader(shader);
+		this.gl.compileShader(shader);
 
-		if (gl.getShaderParameter(shader, gl.COMPILE_STATUS) == true)
+		if (this.gl.getShaderParameter(shader, this.gl.COMPILE_STATUS) == true)
 		{
 			return shader;
 		}
 		else
 		{
-			alert(gl.getShaderInfoLog(shader));
+			alert(this.gl.getShaderInfoLog(shader));
 		}
 	}
 
 	createProgram(vertexShader, fragmentShader)
 	{
-		const gl = this.gl;
+		const program = this.gl.createProgram();
 
-		const program = gl.createProgram();
+		this.gl.attachShader(program, vertexShader);
+		this.gl.attachShader(program, fragmentShader);
 
-		gl.attachShader(program, vertexShader);
-		gl.attachShader(program, fragmentShader);
+		this.gl.linkProgram(program);
 
-		gl.linkProgram(program);
-
-		if (gl.getProgramParameter(program, gl.LINK_STATUS) == true)
+		if (this.gl.getProgramParameter(program, this.gl.LINK_STATUS) == true)
 		{
-			gl.useProgram(program);
+			this.gl.useProgram(program);
 			return program;
 		}
 		else
 		{
-			alert(gl.getProgramInfoLog(program));
+			alert(this.gl.getProgramInfoLog(program));
 		}
 	}
 
 	createVbo(data)
 	{
-		const gl = this.gl;
+		const vbo = this.gl.createBuffer();
 
-		const vbo = gl.createBuffer();
+		this.gl.bindBuffer(this.gl.ARRAY_BUFFER, vbo);
 
-		gl.bindBuffer(gl.ARRAY_BUFFER, vbo);
+		this.gl.bufferData(this.gl.ARRAY_BUFFER, new Float32Array(data), this.gl.STATIC_DRAW);
 
-		gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(data), gl.STATIC_DRAW);
-
-		gl.bindBuffer(gl.ARRAY_BUFFER, null);
+		this.gl.bindBuffer(this.gl.ARRAY_BUFFER, null);
 
 		return vbo;
 	}
