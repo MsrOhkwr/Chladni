@@ -51,11 +51,11 @@ class app
 				return;
 			}
 		}
-
+		const gl = this.gl;
 		(async() =>
 		{
 			return await (await fetch(script.getAttribute("src"))).text();
-		})().then((text) => console.log(text));
+		})().then((text) => gl.shaderSource(shader, text));
 
 		this.gl.shaderSource(shader, script.text);
 
