@@ -22,11 +22,11 @@ class app
 	{
 		const request = new XMLHttpRequest();
 
+		request.open("GET", url, true);
+
 		request.setRequestHeader("Pragma", "no-cache");
 		request.setRequestHeader("Cache-Control", "no-cache");
 		request.setRequestHeader("If-Modified-Since", "Thu, 01 Jun 1970 00:00:00 GMT");
-
-		request.open("GET", url, true);
 
 		request.responseType = "text";
 
