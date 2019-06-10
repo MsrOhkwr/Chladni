@@ -26,6 +26,8 @@ class app
 
 		request.responseType = "text";
 
+		let text = null;
+
 		request.onload = function()
 		{
 			if (request.readyState === request.DONE)
@@ -33,13 +35,14 @@ class app
 				if (request.status === 200)
 				{
 					console.log(request.responseText);
+					text = request.responseText;
 				}
 			}
 		}
 
 		request.send(null);
 		
-		return request.responseText;
+		return text;
 	}
 
 	createShader(id)
