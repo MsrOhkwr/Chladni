@@ -18,9 +18,9 @@ class app
 		this.gl.viewport(0, 0, width, height);
 	}
 
-	async readSource(url)
+	async readSource()
 	{
-		return (await fetch(url)).text();
+		
 	}
 
 	createShader(id)
@@ -52,7 +52,11 @@ class app
 			}
 		}
 
-		console.log(this.readSource(script.getAttribute("src")));
+		const source = (async() =>
+		{
+			return await (await fetch(script.getAttribute("src"))).text();
+		})();
+		console.log(source);
 
 		this.gl.shaderSource(shader, script.text);
 
