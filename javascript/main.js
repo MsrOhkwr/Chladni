@@ -47,6 +47,9 @@ class app
 			}
 		}
 
+		const source = await (await fetch(script.getAttribute("src").text()));
+		console.log(source);
+
 		this.gl.shaderSource(shader, script.text);
 
 		this.gl.compileShader(shader);
