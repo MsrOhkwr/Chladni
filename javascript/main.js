@@ -18,6 +18,42 @@ class app
 		this.gl.viewport(0, 0, width, height);
 	}
 
+	loadShader(url)
+	{
+		/*
+		const request = new XMLHttpRequest();
+
+		request.open("GET", url, false);
+
+		//request.responseType = "text";
+
+		let text = null;
+
+		request.onload = function()
+		{
+			if (request.readyState === request.DONE)
+			{
+				if (request.status === 200)
+				{
+					console.log(request.responseText);
+					text = request.responseText;
+				}
+			}
+		}
+
+		request.send(null);
+		
+		return text;
+		*/
+		return fetch(url).then(function(response)
+		{
+			return response.text();
+		}).then(function(text)
+		{
+			return text;
+		});
+	}
+
 	createShader(id)
 	{
 		let shader;
@@ -47,25 +83,21 @@ class app
 			}
 		}
 
-		
-		fetch(script.getAttribute("src")).then(function(response)
+		const source = this.loadShader(script.getAttribute("src"));
+		console.log(source.join());
+
+		this.gl.shaderSource(shader, source);
+
+		this.gl.compileShader(shader);
+
+		if (this.gl.getShaderParameter(shader, this.gl.COMPILE_STATUS) == true)
 		{
-			return response.text();
-		}).then(function(text)
+			return shader;
+		}
+		else
 		{
-			this.gl.shaderSource(shader, text);
-	
-			this.gl.compileShader(shader);
-	
-			if (this.gl.getShaderParameter(shader, this.gl.COMPILE_STATUS) == true)
-			{
-				return shader;
-			}
-			else
-			{
-				alert(this.gl.getShaderInfoLog(shader));
-			}
-		});
+			alert(this.gl.getShaderInfoLog(shader));
+		}
 	}
 
 	createProgram(vertexShader, fragmentShader)
