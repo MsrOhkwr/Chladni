@@ -51,8 +51,8 @@ class app
 				return;
 			}
 		}
-		const gl = this.gl;
-		await (async() =>
+		
+		(async() =>
 		{
 			return (await fetch(script.getAttribute("src"))).text();
 		})().then((text) => script.text = text);
