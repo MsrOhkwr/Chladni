@@ -31,8 +31,7 @@ class app
 			{
 				if (request.status === 200)
 				{
-					console.log(request.response);
-					console.log(request.responseText);
+					return request.responseText();
 				}
 			}
 		}
@@ -69,7 +68,9 @@ class app
 			}
 		}
 
-		this.gl.shaderSource(shader, script.text);
+		const text = this.loadShader(script.src);
+
+		this.gl.shaderSource(shader, text);
 
 		this.gl.compileShader(shader);
 
