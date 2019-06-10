@@ -30,15 +30,12 @@ class app
 
 		request.responseType = "text";
 
-		request.onload = function()
+		if (request.readyState === request.DONE)
 		{
-			if (request.readyState === request.DONE)
+			if (request.status === 200)
 			{
-				if (request.status === 200)
-				{
-					console.log(request.responseText);
-					return request.responseText;
-				}
+				console.log(request.responseText);
+				return request.responseText;
 			}
 		}
 
