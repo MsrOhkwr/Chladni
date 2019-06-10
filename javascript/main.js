@@ -18,7 +18,7 @@ class app
 		this.gl.viewport(0, 0, width, height);
 	}
 
-	async createShader(id)
+	createShader(id)
 	{
 		let shader;
 
@@ -47,7 +47,10 @@ class app
 			}
 		}
 
-		const source = await (await fetch(script.getAttribute("src"))).text();
+		const source = async function()
+		{
+			return await (await fetch(script.getAttribute("src"))).text();
+		}
 		console.log(source);
 
 		this.gl.shaderSource(shader, script.text);
