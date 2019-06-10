@@ -48,7 +48,7 @@ class app
 		}
 
 		
-		fetch(url).then(function(response)
+		fetch(script.getAttribute("src")).then(function(response)
 		{
 			return response.text();
 		}).then(function(text)
