@@ -8,7 +8,7 @@ void main(void)
 {
 	float x = screenPosition.x;
 	float y = screenPosition.y;
-	float m = 7.0;
+	float m = 8.0;
 	float n = 1.0;
 	float z = abs(cos(n * PI * x) * cos(m * PI * y) - cos(m * PI * x) * cos(n * PI * y));
 	gl_FragColor = vec4(z, z, z, 1.0);
