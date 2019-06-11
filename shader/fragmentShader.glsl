@@ -6,10 +6,10 @@ varying vec2 screenPosition;
 
 void main(void)
 {
-	const float x = screenPosition.x;
-	const float y = screenPosition.y;
-	const int m = 1;
-	const int n = 2;
-	const float z = abs(cos(n * PI * x) * cos(m * PI * y) - cos(m * PI * x) * cos(n * PI * y));
+	float x = screenPosition.x;
+	float y = screenPosition.y;
+	int m = 1;
+	int n = 2;
+	float z = abs(cos(n * PI * x) * cos(m * PI * y) - cos(m * PI * x) * cos(n * PI * y));
 	gl_FragColor = vec4(z, z, z, 1.0);
 }
