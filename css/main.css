@@ -23,15 +23,13 @@ table
 
 svg
 {
-	x: 0;
-	y: 0;
-	width: 32;
-	height: 32;
+	width: 32px;
+	height: 32px;
 }
 
 img
 {
-	width: 32;
+	width: 32px;
 }
 
 @media screen and (min-width:480px) and (max-width:599px)
@@ -65,8 +63,8 @@ img
 
 	svg
 	{
-		width: 64;
-		height: 64;
+		width: 64px;
+		height: 64px;
 	}
 
 	img
@@ -90,12 +88,12 @@ img
 
 	svg
 	{
-		width: 64;
-		height: 64;
+		width: 64px;
+		height: 64px;
 	}
 
 	img
 	{
-		width: 64;
+		width: 64px;
 	}
 }
