@@ -8,8 +8,8 @@ void main(void)
 {
 	const float x = screenPosition.x;
 	const float y = screenPosition.y;
-	const m = 1;
-	const n = 2;
+	const int m = 1;
+	const int n = 2;
 	const float z = abs(cos(n * PI * x) * cos(m * PI * y) - cos(m * PI * x) * cos(n * PI * y));
 	gl_FragColor = vec4(z, z, z, 1.0);
 }
