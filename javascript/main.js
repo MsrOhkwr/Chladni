@@ -16,18 +16,6 @@ class app
 		this.canvas.width = width;
 		this.canvas.height = height;
 		this.gl.viewport(0, 0, width, height);
-		this.readSource();
-	}
-
-	readSource()
-	{
-		const vertexShader = document.getElementById("vertexShader");
-		fetch("./shader/vertexShader.glsl")
-		.then(function(responce)
-		{
-			return responce.text();
-		})
-		.then((text) => console.log(vertexShader.text = text))
 	}
 
 	createShader(id)
@@ -59,7 +47,8 @@ class app
 			}
 		}
 
-		console.log(script.text)
+		fetch(script.getAttribute("src")).text()
+		.then((text) => console.log(script.text = text));
 
 		this.gl.shaderSource(shader, script.text);
 
