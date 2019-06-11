@@ -22,7 +22,7 @@ class app
 	readSource()
 	{
 		const vertexShader = document.getElementById("vertexShader");
-		fetch("./shader/vertexShader")
+		fetch("./shader/vertexShader.glsl")
 		.then(function(responce)
 		{
 			return responce.text();
