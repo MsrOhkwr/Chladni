@@ -10,16 +10,16 @@ body
 	text-align: center;
 }
 
-table
-{
-	width: 100%;
-}
-
 @media screen and (min-width:480px) and (max-width:599px)
 {
 	body
 	{
 		font-size: 1.4rem;
+	}
+
+	table
+	{
+		width: 480px;
 	}
 }
 
@@ -29,6 +29,11 @@ table
 	{
 		font-size: 1.5rem;
 	}
+
+	table
+	{
+		width: 600px;
+	}
 }
 
 @media screen and (min-width:960px) and (max-width:1279px)
@@ -37,6 +42,11 @@ table
 	{
 		font-size: 1.5rem;
 	}
+
+	table
+	{
+		width: 960px;
+	}
 }
 
 @media screen and (min-width:1280px)
@@ -44,5 +54,10 @@ table
 	body
 	{
 		font-size: 1.6rem;
+	}
+
+	table
+	{
+		width: 1280px;
 	}
 }
