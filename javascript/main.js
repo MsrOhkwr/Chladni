@@ -3,7 +3,7 @@ function main()
 	const title = document.createElement("h1");
 	title.innerHTML = "Chladni Patterns"
 	document.body.appendChild(title);
-	const fomula = document.createElement("math");
+	const fomula = document.createElementNS("http://www.w3.org/1998/Math/MathML", "math");
 	fomula.innerHTML = "<mi>cos</mi><mi>(nx&Pi;)</mi><mi>cos</mi><mi>(mx&Pi;)</mi><mi>-</mi><mi>cos</mi><mi>(mx&Pi;)</mi><mi>cos</mi><mi>(nx&Pi;)</mi><mi>=</mi><mi>0</mi>";
 	document.body.appendChild(fomula);
 	const table = document.createElement("table");
