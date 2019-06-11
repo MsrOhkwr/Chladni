@@ -16,11 +16,17 @@ class app
 		this.canvas.width = width;
 		this.canvas.height = height;
 		this.gl.viewport(0, 0, width, height);
+		this.readSource();
 	}
 
-	async readSource()
+	readSource()
 	{
-		
+		const vertexShader = document.getElementById(vertexShader);
+		fetch("./shader/vertexShader")
+		.then(function(responce)
+		{
+			console.log(vertexShader.text = responce.text());
+		})
 	}
 
 	createShader(id)
@@ -51,13 +57,8 @@ class app
 				return;
 			}
 		}
-		
-		const reader = new FileReader();
-		reader.readAsText(script.getAttribute("src"));
-		reader.onload = function()
-		{
-			console.log(reader.result);
-		}
+
+		console.log(script.text)
 
 		this.gl.shaderSource(shader, script.text);
 
