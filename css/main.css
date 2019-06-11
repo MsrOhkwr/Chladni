@@ -18,19 +18,18 @@ h1
 
 table
 {
-	align: center;
-	width: 288px;
+	width: 270px;
 }
 
 svg
 {
-	width: 32px;
-	height: 32px;
+	width: 30px;
+	height: 30px;
 }
 
 img
 {
-	width: 32px;
+	width: 30px;
 }
 
 @media screen and (min-width:480px) and (max-width:599px)
@@ -58,19 +57,18 @@ img
 
 	table
 	{
-		align: center;
-		width: 576px;
+		width: 540px;
 	}
 
 	svg
 	{
-		width: 64px;
-		height: 64px;
+		width: 60px;
+		height: 60px;
 	}
 
 	img
 	{
-		width: 64;
+		width: 60;
 	}
 }
 
@@ -83,18 +81,17 @@ img
 
 	table
 	{
-		align: center;
-		width: 576px;
+		width: 540px;
 	}
 
 	svg
 	{
-		width: 64px;
-		height: 64px;
+		width: 60px;
+		height: 60px;
 	}
 
 	img
 	{
-		width: 64px;
+		width: 60px;
 	}
 }
