@@ -2,7 +2,7 @@ function main()
 {
 	const title = document.createElement("h1");
 	title.innerHTML = "Chladni Patterns"
-	document.body,appendChild(title);
+	document.body.appendChild(title);
 	const table = document.createElement("table");
 	document.body.appendChild(table);
 
