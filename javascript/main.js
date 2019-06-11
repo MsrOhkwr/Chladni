@@ -21,7 +21,7 @@ class app
 
 	readSource()
 	{
-		const vertexShader = document.getElementById(vertexShader);
+		const vertexShader = document.getElementById("vertexShader");
 		fetch("./shader/vertexShader")
 		.then(function(responce)
 		{
