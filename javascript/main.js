@@ -15,7 +15,7 @@ function main()
 			tr.appendChild(td);
 			const img = document.createElement("img");
 			img.setAttribute("src", filename);
-			img.setAttribute("width", "50%");
+			img.setAttribute("width", "64");
 			tr.appendChild(img);
 		}
 	}
