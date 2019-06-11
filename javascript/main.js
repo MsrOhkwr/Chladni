@@ -73,7 +73,7 @@ function main()
 			tr.appendChild(td);
 			const img = document.createElement("img");
 			img.setAttribute("src", filename);
-			img.setAttribute("width", "64");
+			//img.setAttribute("width", "64");
 			td.appendChild(img);
 		}
 	}

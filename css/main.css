@@ -21,7 +21,7 @@ body
 	table
 	{
 		align: center;
-		width: 100%;
+		width: 288px;
 	}
 
 	img
@@ -40,7 +40,7 @@ body
 	table
 	{
 		align: center;
-		width: 100%;
+		width: 288px;
 	}
 
 	img
@@ -61,6 +61,11 @@ body
 		align: center;
 		width: 576px;
 	}
+
+	img
+	{
+		width: 64;
+	}
 }
 
 @media screen and (min-width:1280px)
@@ -74,5 +79,10 @@ body
 	{
 		align: center;
 		width: 576px;
+	}
+
+	img
+	{
+		width: 64;
 	}
 }
