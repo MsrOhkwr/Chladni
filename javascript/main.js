@@ -4,7 +4,14 @@ function main()
 	title.innerHTML = "Chladni Patterns"
 	document.body.appendChild(title);
 	const fomula = document.createElementNS("http://www.w3.org/1998/Math/MathML", "math");
-	fomula.innerHTML = "<mi>cos</mi><mi>(nxπ)</mi><mi>cos</mi><mi>(mxπ)</mi><mo>-</mo><mi>cos</mi><mi>(mxπ)</mi><mi>cos</mi><mi>(nxπ)</mi><mo>=</mo><mn>0</mn>";
+	fomula.innerHTML = 
+	"<mi>cos</mi><mo>(</mo><mi>nxπ</mi><mo>)</mo>\
+	<mi>cos</mi><mo>(</mo><mi>mxπ</mi><mo>)</mo>\
+	<mo>-</mo>\
+	<mi>cos</mi><mo>(</mo><mi>mxπ</mi><mo>)</mo>\
+	<mi>cos</mi><mo>(</mo><mi>nxπ</mi><mo>)</mo>\
+	<mo>=</mo>\
+	<mn>0</mn>";
 	document.body.appendChild(fomula);
 	const table = document.createElement("table");
 	document.body.appendChild(table);
