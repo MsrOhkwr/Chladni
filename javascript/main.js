@@ -13,7 +13,7 @@ function main()
 	svg.setAttribute("height", "64");
 	td.appendChild(svg);
 	const text = document.createElementNS("http://www.w3.org/2000/svg", "text");
-	text.setAttribute("x", "15.32");
+	text.setAttribute("x", "12.275");
 	text.setAttribute("y", "40");
 	text.setAttribute("font-size", "16");
 	text.setAttribute("font-family", "serif")
