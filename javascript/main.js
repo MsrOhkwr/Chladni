@@ -8,7 +8,7 @@ function main()
 	table.appendChild(tr);
 	for (let i = 0; i <= 8; i++)
 	{
-		const svg = document.createElementNS("http://www.w3.org/2000/svg", svg);
+		const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
 		svg.setAttribute("width", "64");
 		svg.setAttribute("height", "64");
 		tr,appendChild(svg);
