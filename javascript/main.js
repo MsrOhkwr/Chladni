@@ -13,7 +13,7 @@ function main()
 	svg.setAttribute("height", "64");
 	td.appendChild(svg);
 	const text = document.createElementNS("http://www.w3.org/2000/svg", "text");
-	text.setAttribute("x", "22.06");
+	text.setAttribute("x", "15.32");
 	text.setAttribute("y", "40");
 	text.setAttribute("font-size", "16");
 	text.innerHTML = "m/n";
@@ -29,7 +29,7 @@ function main()
 		const text = document.createElementNS("http://www.w3.org/2000/svg", "text");
 		text.setAttribute("x", "22.06");
 		text.setAttribute("y", "40");
-		text.setAttribute("font-size", "32");
+		text.setAttribute("font-size", "16");
 		text.innerHTML = i;
 		svg.appendChild(text);
 	}
@@ -46,7 +46,7 @@ function main()
 		const text = document.createElementNS("http://www.w3.org/2000/svg", "text");
 		text.setAttribute("x", "22.06");
 		text.setAttribute("y", "40");
-		text.setAttribute("font-size", "32");
+		text.setAttribute("font-size", "16");
 		text.innerHTML = i;
 		svg.appendChild(text);
 		for (let j = 1; j <= 8; j++)
