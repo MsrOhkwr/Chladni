@@ -17,7 +17,7 @@ function main()
 	text.setAttribute("y", "40");
 	text.setAttribute("font-size", "16");
 	text.setAttribute("font-family", "serif")
-	text.innerHTML = "<math><mi>m</mi>/<mi>n</mi></math>";
+	text.innerHTML = "m / n";
 	svg.appendChild(text);
 	for (let i = 1; i <= 8; i++)
 	{
