@@ -1,5 +1,7 @@
 function main()
 {
+	const title = document.createElement("h1");
+	title.innerHTML = "Chladni Patterns"
 	const table = document.createElement("table");
 	document.body.appendChild(table);
 
