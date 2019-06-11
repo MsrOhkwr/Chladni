@@ -16,7 +16,7 @@ function main()
 			const img = document.createElement("img");
 			img.setAttribute("src", filename);
 			img.setAttribute("width", "64");
-			tr.appendChild(img);
+			td.appendChild(img);
 		}
 	}
 }
