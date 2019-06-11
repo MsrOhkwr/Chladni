@@ -4,11 +4,11 @@ function main()
 	document.body.appendChild(table);
 
 	const ext = ".png"
-	for (let i = 0; i < 8; i++)
+	for (let i = 1; i <= 8; i++)
 	{
 		const tr = document.createElement("tr");
 		table.appendChild(tr);
-		for (let j = 1; j < 8; j++)
+		for (let j = 1; j <= 8; j++)
 		{
 			const filename = "./image/m" + i + "-n" + j + ext;
 			const td = document.createElement("td");
