@@ -1,131 +1,24 @@
-const screan =
-[
-	-1.0, -1.0, 0.0,
-	-1.0, 1.0, 0.0,
-	1.0, 1.0, 0.0,
-	1.0, -1.0, 0.0,
-]
-
-class app
-{
-	constructor(width, height)
-	{
-		this.canvas = document.createElement("canvas");
-		document.body.appendChild(this.canvas);
-		this.gl = this.canvas.getContext("webgl");
-		this.canvas.width = width;
-		this.canvas.height = height;
-		this.gl.viewport(0, 0, width, height);
-	}
-
-	createShader(id)
-	{
-		let shader;
-
-		const script = document.getElementById(id);
-	
-		if (script == null)
-		{
-			return;
-		}
-	
-		switch(script.type)
-		{
-			case "x-shader/x-vertex":
-			{
-				shader = this.gl.createShader(this.gl.VERTEX_SHADER);
-				break;
-			}
-			case "x-shader/x-fragment":
-			{
-				shader = this.gl.createShader(this.gl.FRAGMENT_SHADER);
-				break;
-			}
-			default:
-			{
-				return;
-			}
-		}
-
-		const request = new XMLHttpRequest();
-		request.open("GET", script.getAttribute("src"), false);
-		request.send(null);
-
-		this.gl.shaderSource(shader, request.responseText);
-
-		this.gl.compileShader(shader);
-
-		if (this.gl.getShaderParameter(shader, this.gl.COMPILE_STATUS) == true)
-		{
-			return shader;
-		}
-		else
-		{
-			alert(this.gl.getShaderInfoLog(shader));
-		}
-	}
-
-	createProgram(vertexShader, fragmentShader)
-	{
-		const program = this.gl.createProgram();
-
-		this.gl.attachShader(program, vertexShader);
-		this.gl.attachShader(program, fragmentShader);
-
-		this.gl.linkProgram(program);
-
-		if (this.gl.getProgramParameter(program, this.gl.LINK_STATUS) == true)
-		{
-			this.gl.useProgram(program);
-			return program;
-		}
-		else
-		{
-			alert(this.gl.getProgramInfoLog(program));
-		}
-	}
-
-	createVbo(data)
-	{
-		const vbo = this.gl.createBuffer();
-
-		this.gl.bindBuffer(this.gl.ARRAY_BUFFER, vbo);
-
-		this.gl.bufferData(this.gl.ARRAY_BUFFER, new Float32Array(data), this.gl.STATIC_DRAW);
-
-		this.gl.bindBuffer(this.gl.ARRAY_BUFFER, null);
-
-		return vbo;
-	}
-}
-
 function main()
 {
-	const mainApp = new app(512, 512);
+	const table = document.createElement("table");
+	document.body.appendChild(table);
 
-	mainApp.gl.clearColor(0.0, 0.0, 0.0, 1.0);
-	mainApp.gl.clear(mainApp.gl.COLOR_BUFFER_BIT);
-
-	const vertexShader = mainApp.createShader("vertexShader");
-	const fragmentShader = mainApp.createShader("fragmentShader");
-
-	const mainProgram = mainApp.createProgram(vertexShader, fragmentShader);
-
-	const attributeLocation = mainApp.gl.getAttribLocation(mainProgram, "verticesPosition");
-
-	const attributeSlide = 3;
-	
-	const vbo = mainApp.createVbo(screan);
-
-	mainApp.gl.bindBuffer(mainApp.gl.ARRAY_BUFFER, vbo);
-
-	mainApp.gl.enableVertexAttribArray(attributeLocation);
-
-	mainApp.gl.vertexAttribPointer(attributeLocation, attributeSlide, mainApp.gl.FLOAT, false, 0, 0);
-
-	mainApp.gl.drawArrays(mainApp.gl.TRIANGLE_FAN, 0, 4);
-
-	mainApp.gl.flush();
+	const ext = ".png"
+	for (let i = 0; i < 8; i++)
+	{
+		const tr = document.createElement("tr");
+		table.appendChild(tr);
+		for (let j = 1; j < 8; j++)
+		{
+			const filename = "./image/m" + i + "-n" + j + ext;
+			const td = document.createElement("td");
+			tr.appendChild(td);
+			const img = document.createElement("img");
+			img.setAttribute("src", filename);
+			img.setAttribute("width", "128");
+			tr.appendChild(img);
+		}
+	}
 }
 
 main();
