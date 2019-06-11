@@ -23,8 +23,7 @@ table
 
 svg
 {
-	width: 32;
-	height: auto;
+	viewBox: 0 0 32 32;
 }
 
 img
@@ -63,8 +62,7 @@ img
 
 	svg
 	{
-		width: 64;
-		height: auto;
+		viewBox: 0 0 64 64;
 	}
 
 	img
@@ -88,8 +86,7 @@ img
 
 	svg
 	{
-		width: 64;
-		height: auto;
+		viewBox: 0 0 64 64;
 	}
 
 	img
