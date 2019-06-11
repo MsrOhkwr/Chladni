@@ -1,0 +1,48 @@
+html
+{
+	font-size: 62.5%;
+}
+  
+body
+{
+	font-size: 16px;
+	font-size: 1.6rem;
+}
+
+.sample{
+	text-align: center;
+	background: #ccc;
+	font-size: 1.2rem;
+}
+
+@media screen and (min-width:480px) and (max-width:599px)
+{
+	.sample
+	{
+		font-size: 1.4rem;
+	}
+}
+
+@media screen and (min-width:600px) and (max-width:959px)
+{
+	.sample
+	{
+		font-size: 1.5rem;
+	}
+}
+
+@media screen and (min-width:960px) and (max-width:1279px)
+{
+	.sample
+	{
+		font-size: 1.5rem;
+	}
+}
+
+@media screen and (min-width:1280px)
+{
+	.sample
+	{
+		font-size: 1.6rem;
+	}
+}
