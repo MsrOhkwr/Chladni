@@ -19,7 +19,7 @@ body
 
 	table
 	{
-		width: 480px;
+		width: 100%;
 	}
 }
 
@@ -32,7 +32,7 @@ body
 
 	table
 	{
-		width: 100%;
+		width: 576px;
 	}
 }
 
@@ -45,7 +45,7 @@ body
 
 	table
 	{
-		width: 100%;
+		width: 576px;
 	}
 }
 
@@ -58,6 +58,6 @@ body
 
 	table
 	{
-		width: 100%;
+		width: 576px;
 	}
 }
