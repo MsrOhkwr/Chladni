@@ -16,6 +16,7 @@ function main()
 	text.setAttribute("x", "15.32");
 	text.setAttribute("y", "40");
 	text.setAttribute("font-size", "16");
+	text.setAttribute("font-family", "serif")
 	text.innerHTML = "m/n";
 	svg.appendChild(text);
 	for (let i = 1; i <= 8; i++)
@@ -30,6 +31,7 @@ function main()
 		text.setAttribute("x", "26.53");
 		text.setAttribute("y", "40");
 		text.setAttribute("font-size", "16");
+		text.setAttribute("font-family", "serif");
 		text.innerHTML = i;
 		svg.appendChild(text);
 	}
@@ -47,6 +49,7 @@ function main()
 		text.setAttribute("x", "26.53");
 		text.setAttribute("y", "40");
 		text.setAttribute("font-size", "16");
+		text.setAttribute("font-family", "serif");
 		text.innerHTML = i;
 		svg.appendChild(text);
 		for (let j = 1; j <= 8; j++)
