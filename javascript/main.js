@@ -6,7 +6,19 @@ function main()
 	const ext = ".png"
 	const tr = document.createElement("tr");
 	table.appendChild(tr);
-	for (let i = 0; i <= 8; i++)
+	const td = document.createElement("td");
+	tr.appendChild(td);
+	const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+	svg.setAttribute("width", "64");
+	svg.setAttribute("height", "64");
+	td.appendChild(svg);
+	const text = document.createElementNS("http://www.w3.org/2000/svg", "text");
+	text.setAttribute("x", "22.06");
+	text.setAttribute("y", "40");
+	text.setAttribute("font-size", "32");
+	text.innerHTML = "m/n";
+	svg.appendChild(text);
+	for (let i = 1; i <= 8; i++)
 	{
 		const td = document.createElement("td");
 		tr.appendChild(td);
@@ -31,6 +43,12 @@ function main()
 		svg.setAttribute("width", "64");
 		svg.setAttribute("height", "64");
 		td.appendChild(svg);
+		const text = document.createElementNS("http://www.w3.org/2000/svg", "text");
+		text.setAttribute("x", "22.06");
+		text.setAttribute("y", "40");
+		text.setAttribute("font-size", "32");
+		text.innerHTML = i;
+		svg.appendChild(text);
 		for (let j = 1; j <= 8; j++)
 		{
 			const filename = "./image/m" + i + "-n" + j + ext;
