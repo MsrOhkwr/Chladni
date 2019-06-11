@@ -27,7 +27,7 @@ function main()
 		svg.setAttribute("height", "64");
 		td.appendChild(svg);
 		const text = document.createElementNS("http://www.w3.org/2000/svg", "text");
-		text.setAttribute("x", "22.06");
+		text.setAttribute("x", "26.53");
 		text.setAttribute("y", "40");
 		text.setAttribute("font-size", "16");
 		text.innerHTML = i;
@@ -44,7 +44,7 @@ function main()
 		svg.setAttribute("height", "64");
 		td.appendChild(svg);
 		const text = document.createElementNS("http://www.w3.org/2000/svg", "text");
-		text.setAttribute("x", "22.06");
+		text.setAttribute("x", "26.53");
 		text.setAttribute("y", "40");
 		text.setAttribute("font-size", "16");
 		text.innerHTML = i;
