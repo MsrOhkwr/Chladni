@@ -22,7 +22,7 @@ function main()
 			const filename = "./image/m" + i + "-n" + j + ext;
 			const td = document.createElement("td");
 			tr.appendChild(td);
-			const svg = document.createElementNS("http://www.w3.org/2000/svg", svg);
+			const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
 			svg.setAttribute("width", "64");
 			svg.setAttribute("height", "64");
 			tr,appendChild(svg);
