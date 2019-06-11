@@ -24,6 +24,11 @@ body
 		width: 288px;
 	}
 
+	svg
+	{
+		width: 32;
+	}
+
 	img
 	{
 		width: 32;
@@ -41,6 +46,11 @@ body
 	{
 		align: center;
 		width: 288px;
+	}
+
+	svg
+	{
+		width: 32;
 	}
 
 	img
@@ -62,6 +72,11 @@ body
 		width: 576px;
 	}
 
+	svg
+	{
+		width: 64;
+	}
+
 	img
 	{
 		width: 64;
@@ -79,6 +94,11 @@ body
 	{
 		align: center;
 		width: 576px;
+	}
+
+	svg
+	{
+		width: 64;
 	}
 
 	img
