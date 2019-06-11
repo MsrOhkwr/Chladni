@@ -47,10 +47,11 @@ class app
 			}
 		}
 
-		fetch(script.getAttribute("src")).text()
-		.then((text) => console.log(script.text = text));
+		const request = new XMLHttpRequest();
+		request.open("GET", script.getAttribute("src"), false);
+		request.send(null);
 
-		this.gl.shaderSource(shader, script.text);
+		this.gl.shaderSource(shader, request.responseText);
 
 		this.gl.compileShader(shader);
 
