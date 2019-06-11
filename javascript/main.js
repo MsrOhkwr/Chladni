@@ -15,8 +15,8 @@ function main()
 		svg.setAttribute("height", "64");
 		td.appendChild(svg);
 		const text = document.createElementNS("http://www.w3.org/2000/svg", "text");
-		text.setAttribute("x", "22");
-		text.setAttribute("y", "64");
+		text.setAttribute("x", "22.06");
+		text.setAttribute("y", "48");
 		text.setAttribute("font-size", "32");
 		text.innerHTML = i;
 		svg.appendChild(text);
