@@ -38,23 +38,6 @@ img
 	{
 		font-size: 1.4rem;
 	}
-
-	table
-	{
-		align: center;
-		width: 288px;
-	}
-
-	svg
-	{
-		width: 50%;
-		height: auto;
-	}
-
-	img
-	{
-		width: 32;
-	}
 }
 
 @media screen and (min-width:600px) and (max-width:959px)
@@ -62,23 +45,6 @@ img
 	body
 	{
 		font-size: 1.5rem;
-	}
-
-	table
-	{
-		align: center;
-		width: 288px;
-	}
-
-	svg
-	{
-		width: 50%;
-		height: auto;
-	}
-
-	img
-	{
-		width: 32;
 	}
 }
 
