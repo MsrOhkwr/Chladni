@@ -23,8 +23,9 @@ function main()
 	const td = document.createElement("td");
 	tr.appendChild(td);
 	const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-	svg.setAttribute("width", "64");
-	svg.setAttribute("height", "64");
+	//svg.setAttribute("width", "64");
+	//svg.setAttribute("height", "64");
+	svg.setAttribute("viewBox", "0, 0, 64, 64");
 	td.appendChild(svg);
 	const text = document.createElementNS("http://www.w3.org/2000/svg", "text");
 	text.setAttribute("x", "12.275");
@@ -38,8 +39,9 @@ function main()
 		const td = document.createElement("td");
 		tr.appendChild(td);
 		const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-		svg.setAttribute("width", "64");
-		svg.setAttribute("height", "64");
+		//svg.setAttribute("width", "64");
+		//svg.setAttribute("height", "64");
+		svg.setAttribute("viewBox", "0, 0, 64, 64");
 		td.appendChild(svg);
 		const text = document.createElementNS("http://www.w3.org/2000/svg", "text");
 		text.setAttribute("x", "26.53");
@@ -56,8 +58,9 @@ function main()
 		const td = document.createElement("td");
 		tr.appendChild(td);
 		const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-		svg.setAttribute("width", "64");
-		svg.setAttribute("height", "64");
+		//svg.setAttribute("width", "64");
+		//svg.setAttribute("height", "64");
+		svg.setAttribute("viewBox", "0, 0, 64, 64");
 		td.appendChild(svg);
 		const text = document.createElementNS("http://www.w3.org/2000/svg", "text");
 		text.setAttribute("x", "26.53");
@@ -73,7 +76,6 @@ function main()
 			tr.appendChild(td);
 			const img = document.createElement("img");
 			img.setAttribute("src", filename);
-			//img.setAttribute("width", "64");
 			td.appendChild(img);
 		}
 	}
