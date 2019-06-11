@@ -4,9 +4,7 @@ function main()
 	title.setAttribute("font-family", "serif");
 	title.innerHTML = "Chladni Patterns"
 	document.body.appendChild(title);
-	const fomula = document.createElement("math");
-	document.body.appendChild(fomula);
-	fomula.innerHTML = "cos(nxPi)cos(mxPi) - cos(mxPi)cos(nxPi) = 0";
+	fomula.innerHTML = "<math><mi>cos</mi><mi>(nxPi)</mi><mi>cos</mi><mi>(mxPi)</mi><mi>-</mi><mi>cos</mi><mi>(mxPi)</mi><mi>cos</mi><mi>(nxPi)</mi><mi>=</mi><mi>0</mi></math>";
 	const table = document.createElement("table");
 	document.body.appendChild(table);
 
