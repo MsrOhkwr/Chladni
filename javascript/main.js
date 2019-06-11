@@ -25,8 +25,9 @@ class app
 		fetch("./shader/vertexShader")
 		.then(function(responce)
 		{
-			console.log(vertexShader.text = responce.text());
+			return responce.text();
 		})
+		.then((text) => console.log(vertexShader.text = text))
 	}
 
 	createShader(id)
