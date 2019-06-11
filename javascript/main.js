@@ -1,11 +1,10 @@
 function main()
 {
 	const title = document.createElement("h1");
-	title.setAttribute("font-family", "serif");
 	title.innerHTML = "Chladni Patterns"
 	document.body.appendChild(title);
 	const fomula = document.createElement("math");
-	fomula.innerHTML = "<mi>cos</mi><mi>(nxPi)</mi><mi>cos</mi><mi>(mxPi)</mi><mi>-</mi><mi>cos</mi><mi>(mxPi)</mi><mi>cos</mi><mi>(nxPi)</mi><mi>=</mi><mi>0</mi>";
+	fomula.innerHTML = "<mi>cos</mi><mi>(nx&Pi;)</mi><mi>cos</mi><mi>(mx&Pi;)</mi><mi>-</mi><mi>cos</mi><mi>(mx&Pi;)</mi><mi>cos</mi><mi>(nx&Pi;)</mi><mi>=</mi><mi>0</mi>";
 	document.body.appendChild(fomula);
 	const table = document.createElement("table");
 	document.body.appendChild(table);
