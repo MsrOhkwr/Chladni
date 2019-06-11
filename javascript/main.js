@@ -15,7 +15,7 @@ function main()
 	const text = document.createElementNS("http://www.w3.org/2000/svg", "text");
 	text.setAttribute("x", "22.06");
 	text.setAttribute("y", "40");
-	text.setAttribute("font-size", "32");
+	text.setAttribute("font-size", "16");
 	text.innerHTML = "m/n";
 	svg.appendChild(text);
 	for (let i = 1; i <= 8; i++)
