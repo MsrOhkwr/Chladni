@@ -5,11 +5,11 @@ function main()
 	document.body.appendChild(title);
 	const fomula = document.createElementNS("http://www.w3.org/1998/Math/MathML", "math");
 	fomula.innerHTML = 
-	"<mi>cos</mi><mo>(</mo><mi>nxπ</mi><mo>)</mo>\
-	<mi>cos</mi><mo>(</mo><mi>mxπ</mi><mo>)</mo>\
+	"<mi>cos</mi><mo>(</mo><mi>n<mi></mi>x<mi></mi>π</mi><mo>)</mo>\
+	<mi>cos</mi><mo>(</mo><mi>m<mi></mi>x<mi></mi>π</mi><mo>)</mo>\
 	<mo>-</mo>\
-	<mi>cos</mi><mo>(</mo><mi>mxπ</mi><mo>)</mo>\
-	<mi>cos</mi><mo>(</mo><mi>nxπ</mi><mo>)</mo>\
+	<mi>cos</mi><mo>(</mo><mi>m<mi></mi>x<mi></mi>π</mi><mo>)</mo>\
+	<mi>cos</mi><mo>(</mo><mi>n<mi></mi>x<mi></mi>π</mi><mo>)</mo>\
 	<mo>=</mo>\
 	<mn>0</mn>";
 	document.body.appendChild(fomula);
