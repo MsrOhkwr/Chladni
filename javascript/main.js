@@ -14,6 +14,7 @@ function main()
 	<mn>0</mn>";
 	document.body.appendChild(fomula);
 	const table = document.createElement("table");
+	table.setAttribute("align", "center");
 	document.body.appendChild(table);
 
 	const ext = ".png"
